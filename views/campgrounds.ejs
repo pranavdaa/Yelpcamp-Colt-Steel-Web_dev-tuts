@@ -1,0 +1,39 @@
+
+<% include partials/header %>
+<style>
+  img {
+    width: 200px; /* You can set the dimensions to whatever you want */
+    height: 200px;
+    object-fit: cover;
+}
+</style>
+<div class="container">
+
+<div class="container">
+<header class="jumbotron">
+<h1>This is the capmgrounds page</h1>
+<p>view our handpicked camprouds from all over the world</p>
+<p>
+<a class="btn btn-primary btn-large" href="/campgrounds/new">Add new camping site</a>
+</p>
+
+</header>
+</div>
+
+<div class="row" style="display:flex; flex-wrap: wrap;">
+<% campgrounds.forEach(function(campgrounds){ %>
+  <div class="col-md-3 col-sm-6">
+    <div class="thumbnail">
+    <img class="img" src="<%= campgrounds.image %>">
+    <div class="caption">
+    <h4><%= campgrounds.name %></h4>
+    </div>
+    </div>
+
+
+  </div>
+<% }) %>
+</div>
+
+</div>
+<% include partials/footer %>
