@@ -1,0 +1,9 @@
+<h1>This is going to be the future<%= campgrounds.name %></h1>
+<img src="<%= campgrounds.image %>">
+<%= campgrounds.describtion %>
+
+ <p><% campgrounds.comments.forEach(function(comment){ %>
+  <p>
+<%= comment.author %> - <%= comment.text %>
+  </p>
+<%}) %>
